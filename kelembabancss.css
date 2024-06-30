@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Times, Times New Roman, serif;
+    align-items: center;
+    background-color: rgb(7, 21, 34);
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Sesuaikan dengan lebar sidebar */
+    height: 100vh; /* Sesuaikan dengan tinggi layar */
+    background-color: rgb(11, 11, 91);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.6em;
+}
+
+#content {
+    margin-left: 200px; /* Sesuaikan dengan lebar sidebar */
+    padding-left: 20px; /* Untuk memberikan ruang agar konten tidak menempel langsung pada sidebar */
+}
+
+#sidebar h2 {
+    margin-top: -260%; /* Jarak dari bagian atas */
+    margin-left: -10px;
+}
+#sidebar h2::after {
+    content: '';
+    position: fixed;
+    top:90px;
+    left: 0%;
+    width: 15.5%;
+    height: 2px;
+    bottom: -5px; /* Jarak dari teks */
+    background: linear-gradient(to right, #fff, #00f); /* Gradient warna */
+}
+#sidebar h2 img {
+    width: 50px; /* Sesuaikan lebar logo */
+    height: auto; /* Sesuaikan tinggi agar proporsi tetap terjaga */
+    margin-right: 0px; /* Jarak antara logo dan teks */
+    vertical-align: middle; /* Menyusun logo dan teks secara vertikal */
+}
+
+#content1 {
+    position: fixed;
+    top: 100px; /* Tinggi topbar */
+    left: 0;
+    width: 200px; /* Lebar sidebar */
+    padding-top: 20px; /* Jarak dari atas */
+    background-color:rgb(21, 21, 71); /* Warna sidebar */
+    color: white;
+}
+
+#content1 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar #content1 a {
+    display: block; /* agar tautan menjadi blok dan memiliki lebar maksimum */
+    padding: 10px 20px; /* menambahkan padding untuk memberikan ruang di sekitar teks */
+    text-decoration: none; /* menghapus garis bawah default pada tautan */
+    color: white; /* warna teks */
+    font-size: 14px; /* ukuran teks */
+}
+
+#content1 ul li {
+    margin-bottom: 10px;
+}
+
+#content1 ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#content1 ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Warna latar belakang saat hover */
+}
+
+/* Gaya tambahan untuk elemen canvas */
+canvas#humidity-chart {
+    width: 35%; /* Memastikan grafik menyesuaikan lebar */
+    height: 300px; /* Atur tinggi grafik sesuai kebutuhan */
+    margin-top: 300px; /* Jarak antara grafik dengan konten sebelumnya */
+    padding: 20px; /* Ruang di sekitar grafik */
+    box-sizing: border-box; /* Memperhitungkan padding dalam perhitungan dimensi */
+    border: 1px solid #ccc; /* Garis tepi untuk memberi tampilan yang lebih rapi */
+}
+
+
+/* Gaya tambahan untuk konten */
+#content2 {
+    margin-left: 220px;
+    padding: 20px;
+
+}
+    
+
+    
+    #content3 {
+        margin-left: 200px;
+        width: 580px;
+        height: 450px;
+        position: absolute;
+        top: 110%;
+        left: -1%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #content3 canvas {
+        width: 250px; /* Sesuaikan dengan ukuran yang diinginkan */
+        height: 190px; /* Sesuaikan dengan ukuran yang diinginkan */
+        border: 2px transparent;
+        border-radius: 0%;
+        background-color:rgb(9, 30, 50);
+        margin: 55px;
+        padding: 10px;;
+      
+        
+    }
+    
+ /* CSS untuk posisi data nilai di tengah-tengah grafik */
+.chart-container {
+    position: relative; /* Membuat elemen 'div' yang berisi 'canvas' dan 'data-value' menjadi elemen kontainer relatif */
+    display: inline-block; /* Menjadikan elemen 'div' sebagai elemen inline-block */
+    top: -160%;
+    left: -2%;
+}
+
+.data-value {
+    position: absolute; /* Membuat elemen 'div' yang menampilkan data nilai menjadi posisi absolut */
+    text-align: center; /* Mengatur teks agar berada di tengah secara horizontal */
+    top: 55%; /* Menempatkan elemen di tengah secara vertikal */
+    left: 50%; /* Menempatkan elemen di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Menggeser elemen ke tengah */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+}
+#content7{
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 110%;
+    left: 15%;
+}
+#humidity-histogram {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+
+#content4 {
+    margin-top:4%;
+    margin-left: 65%;
+    color: white;
+    background-color: transparent;
+}
+
+table {
+    width: 85%;
+    height:100% ;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #dddddd;
+    padding: 6px;
+    text-align: center;
+}
+
+table th {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+table tr:nth-child(even) {
+    background-color:rgb(9, 30, 50);
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+#content h5 {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    position: absolute;
+    font-weight: bold;
+    top:0%;
+    font-size: 25px;
+   
+}
+
+#content h5::after {
+    content: '';
+    position: absolute;
+    top:50px;
+    left: -6%;
+    width: 320%;
+    height: 2px;
+    bottom: -5px; /* Jarak dari teks */
+    background: linear-gradient(to right, #fff, rgb(3, 141, 183)); /* Gradient warna */
+}
+
+#content h6 {
+    text-align: center;
+    margin-top: 50%;
+    color: #ffffff;
+    position: absolute;
+    top:0%;
+    font-size: 25px;
+}
+#content h6::after {
+    content: '';
+    position: absolute;
+    top:120%;
+    left: -5%;
+    width: 150%;
+    height: 2px;
+    bottom: -5px; /* Jarak dari teks */
+    background: linear-gradient(to right, #fff, rgb(3, 141, 183)); /* Gradient warna */
+}
+
+#content h7 {
+    text-align: center;
+    margin-top: 50%;
+    color: #ffffff;
+    position: absolute;
+    top:0%;
+    left: 78%;
+    font-weight: bold;
+    font-size: 25px;
+}
+#content h7::after {
+    content: '';
+    position: absolute;
+    top:120%;
+    left: -90%;
+    width: 200%;
+    height: 2px;
+    bottom: -5px; /* Jarak dari teks */
+    background: linear-gradient(to right, #fff, rgb(3, 141, 183)); /* Gradient warna */
+}
+
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 80%;
+    top:2%
+  }
+  
+  .icon-item {
+    display: flex;
+    align-items: center;
+    margin-right: 5px; /* Adjust margin as needed */
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    stroke: white; /* Mengatur garis sisi ikon menjadi putih */
+    stroke-width: 2px; /* Mengatur ketebalan garis */
+  }
+  
+  .red {
+    fill: rgb(255, 0, 0);
+  }
+  
+  .green {
+    fill: green;
+  }
+  .yellow {
+    fill: rgb(239, 255, 10);
+  }
+  .flashing {
+    animation: flash 1s infinite alternate;
+  }
+  
+  @keyframes flash {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+  }
+  
+  .prediction-text {
+    margin-right: 10px; /* Adjust margin as needed */
+    font-size: 14px; /* Adjust font size as needed */
+    color: rgb(255, 254, 254); /* Adjust text color as needed */
+  }
+  
+
+
+
+
+

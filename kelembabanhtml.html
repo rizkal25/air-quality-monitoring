@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelembaban</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Tautan Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Tautan Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="kelembabancss.css">
+</head>
+<body>
+
+
+<div id="sidebar">
+    <h2><img src="logovoe.png" alt="Logo"> Occupant Estimator</h2>
+    <div class="vertical-line"></div>
+    <div id="content1">
+        <ul>
+            
+            <li><a href="#" onclick="showHumidityChart()"><i class="fas fa-tint"></i> Kelembaban</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+<div id="content2">
+    <canvas id="humidity-chart"></canvas>
+</div>
+
+<div class="icon-container">
+    <div class="icon-item">
+      <span id="prediction-text-1" class="prediction-text">Predt 1</span>
+      <svg id="person-icon-1" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="2"/>
+        <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+      </svg>
+    </div>
+    <div class="icon-item">
+      <span id="prediction-text-2" class="prediction-text">Predt 2</span>
+      <svg id="person-icon-2" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="2"/>
+        <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+      </svg>
+    </div>
+    <div class="icon-item">
+      <span id="prediction-text-3" class="prediction-text">Predt 3</span>
+      <svg id="person-icon-3" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="2"/>
+        <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+      </svg>
+    </div>
+  </div>
+  
+
+
+<div id="content3">
+    <div class="chart-container">
+        <canvas id="max-humidity-chart"></canvas>
+        <div class="data-value" id="max-humidity-data-value"></div>
+    </div>
+    <div class="chart-container">
+        <canvas id="min-humidity-chart"></canvas>
+        <div class="data-value" id="min-humidity-data-value"></div>
+    </div>
+    <div class="chart-container">
+        <canvas id="avg-humidity-chart"></canvas>
+        <div class="data-value" id="avg-humidity-data-value"></div>
+    </div>
+</div>
+<div id="content7">
+    <canvas id="humidity-histogram"></canvas> 
+</div>
+
+<div id="content4">
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Time</th>
+                <th>Kelembaban (%)</th>
+            </tr>
+        </thead>
+        <tbody id="humidity-table">
+            <!-- Isi tabel akan ditambahkan di sini -->
+        </tbody>
+    </table>
+</div>
+
+
+<div id="content">
+    <h5>OVERVIEW-KELEMBABAN</h5>
+</div>
+
+<div id="content">
+    <h6>HISTOGRAM-KELEMBABAN</h6>
+</div>
+
+<div id="content">
+    <h7>DATA-KELEMBABAN</h7>
+</div>
+
+<script src="kelembabanjava.js"></script> <!-- Tautan ke file JavaScript -->
+</body>
+</html>

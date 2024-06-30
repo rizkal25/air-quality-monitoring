@@ -1,0 +1,293 @@
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: Times, Times New Roman, serif;
+    align-items: center;
+    background-color: rgb(7, 21, 34);
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(11, 11, 91);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.6em;
+}
+
+#content {
+    margin-left: 200px;
+    padding-left: 20px;
+}
+
+#sidebar h2 {
+    margin-top: -260%;
+    margin-left: -10px;
+}
+#sidebar h2::after {
+    content: '';
+    position: fixed;
+    top: 90px;
+    left: 0%;
+    width: 15.5%;
+    height: 2px;
+    bottom: -5px;
+    background: linear-gradient(to right, #fff, #00f);
+}
+#sidebar h2 img {
+    width: 50px;
+    height: auto;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+
+#content1 {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 200px;
+    padding-top: 20px;
+    background-color: rgb(21, 21, 71);
+    color: white;
+}
+
+#content1 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar #content1 a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+#content1 ul li {
+    margin-bottom: 10px;
+}
+
+#content1 ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#content1 ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#content {
+    margin-left: 220px;
+    padding: 20px;
+    position: absolute;
+    left: 0%;
+    top: -2px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Jarak antara teks dan kotak */
+    position: fixed;
+    top: -2%;
+}
+
+h5 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.box {
+    width: 32px; /* Lebar kotak */
+    height: 20px; /* Tinggi kotak */
+    border: 2px solid #ffffff; /* Border kotak */
+    background-color: #ffffff; /* Warna latar belakang kotak */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Bayangan kotak */
+}
+
+
+.subtitle {
+    color: #00ffff;
+    font-size: 30px;
+    text-align: left;
+    margin-top: 10px;
+    position: fixed;
+    top: 10%;
+    left: 19%;
+    font-weight: bold;
+    font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+}
+
+#content .subtitle::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 1%;
+    width: 100%;
+    height: 4px;
+    bottom: -5px;
+    background: linear-gradient(to right, #fff, rgb(14, 127, 255));
+}
+
+.description {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px; /* Jarak atas */
+    max-width: 600px; /* Lebar maksimum teks */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6; /* Jarak antar baris */
+    position: fixed;
+    top: 22%;
+    left: 19%;
+    background-color: rgb(23, 23, 40);
+}
+
+.chart-container {
+    width: 500px; /* Sesuaikan lebar grafik sesuai kebutuhan */
+    height: auto; /* Sesuaikan tinggi grafik sesuai kebutuhan */
+    background-color:  rgb(23, 23, 40);
+
+}
+.suhu-container {
+    position: absolute;
+    top: 190px; /* Sesuaikan nilai top sesuai dengan posisi yang diinginkan */
+    left: 220px; /* Sesuaikan nilai left sesuai dengan posisi yang diinginkan */
+    width: 155px;
+    height: 155px;
+}
+
+.kelembaban-container {
+    position: absolute;
+    top: 190px; /* Sesuaikan nilai top sesuai dengan posisi yang diinginkan */
+    left: 380px; /* Sesuaikan nilai left sesuai dengan posisi yang diinginkan */
+    width: 155px;
+    height: 155px;
+}
+
+.tekanan-udara-container { 
+    position: absolute;
+    top: 190px; /* Sesuaikan nilai top sesuai dengan posisi yang diinginkan */
+    left: 540px; /* Sesuaikan nilai left sesuai dengan posisi yang diinginkan */
+    width: 155px;
+    height: 155px;
+}
+
+.karbon-dioksida-container {
+    position: absolute;
+    top: 350px; /* Sesuaikan nilai top sesuai dengan posisi yang diinginkan */
+    left: 220px; /* Sesuaikan nilai left sesuai dengan posisi yang diinginkan */
+    width: 155px;
+    height: 155px;
+}
+
+.pm25-container {
+    position: absolute;
+    top: 350px; /* Sesuaikan nilai top sesuai dengan posisi yang diinginkan */
+    left: 380px; /* Sesuaikan nilai left sesuai dengan posisi yang diinginkan */
+    width: 155px;
+    height: 155px;
+}
+
+.chart-label {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px; /* Sesuaikan ukuran teks sesuai kebutuhan */
+    font-weight: bold;
+    color: #ffffff; /* Warna teks */
+}
+#image-container {
+    position: absolute;
+    top: 10%; /* Ubah sesuai kebutuhan untuk menyesuaikan posisi */
+    left: 70%; /* Ubah sesuai kebutuhan untuk menyesuaikan posisi */
+    width: 300px; /* Sesuaikan lebar gambar */
+    height: auto; /* Memastikan gambar tetap proporsional */
+    background-color:  rgb(23, 23, 40);
+}
+
+#image-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+#content3 h5 {
+    text-align: right;
+    margin-top: 20px;
+    color: #00ffff;
+    position: absolute;
+    font-weight: bold;
+    top: 50%;
+    font-size: 25px;
+    left: 67%;
+}
+
+#content3 h5::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: -6%;
+    width: 300%;
+    height: 2px;
+    bottom: -5px;
+    background: linear-gradient(to right, #fff, rgb(3, 141, 183));
+}
+/* Styles for Icon Grouping */
+#icon-groups {
+    display: flex;
+    flex-direction: column; /* Menetapkan arah kolom untuk grup ikon */
+    align-items: left;
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    stroke: white; /* Mengatur garis sisi ikon menjadi putih */
+    stroke-width: 2px; /* Mengatur ketebalan garis */
+}
+
+.group {
+    position: relative; /* Mengatur posisi relatif untuk grup */
+   
+    margin-top: 10px; /* Jarak antara grup */
+
+}
+
+svg {
+    width: auto; /* Ukuran ikon disesuaikan dengan kebutuhan */
+    height: 50px;
+}
+
+.icon-red {
+    fill: rgb(255, 0, 0); /* Warna ikon biru */
+}
+
+.icon-green {
+    fill: green; /* Warna ikon hijau */
+}
+.icon-yellow {
+    fill: rgb(247, 255, 3); /* Warna ikon hijau */
+}
+.group-name {
+    color: white;
+    font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+    background-color: transparent;
+    stroke: white;
+    position: absolute;
+    left: 120%;
+    text-align: left;
+}

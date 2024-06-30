@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadar Partikulat PM2.5</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Tautan Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Tautan Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="pm2.5css.css"> <!-- Ganti dengan nama file CSS yang sesuai -->
+</head>
+<body>
+<div id="sidebar">
+    <h2><img src="logovoe.png" alt="Logo"> Occupant Estimator</h2>
+    <div class="vertical-line"></div>
+    <div id="content1">
+        <ul>
+            <li><a href="#" onclick="showPM25Chart()"><i class="fas fa-tachometer-alt"></i> Kadar Partikulat PM2.5</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="content2">
+    <canvas id="pm25-chart"></canvas>
+</div>
+<div class="icon-container">
+    <div class="icon-item">
+      <span id="prediction-text-1" class="prediction-text">Prediksi 1</span>
+      <svg id="person-icon-1" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="2"/>
+        <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+      </svg>
+    </div>
+    <div class="icon-item">
+      <span id="prediction-text-2" class="prediction-text">Prediksi 2</span>
+      <svg id="person-icon-2" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="2"/>
+        <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+      </svg>
+    </div>
+    <div class="icon-item">
+      <span id="prediction-text-3" class="prediction-text">Prediksi 3</span>
+      <svg id="person-icon-3" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="2"/>
+        <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+      </svg>
+    </div>
+  </div>
+
+<div id="content3">
+    <div class="chart-container">
+        <canvas id="max-pm25-chart"></canvas>
+        <div class="data-value" id="max-pm25-data-value"></div>
+    </div>
+    <div class="chart-container">
+        <canvas id="min-pm25-chart"></canvas>
+        <div class="data-value" id="min-pm25-data-value"></div>
+    </div>
+    <div class="chart-container">
+        <canvas id="avg-pm25-chart"></canvas>
+        <div class="data-value" id="avg-pm25-data-value"></div>
+    </div>
+</div>
+<div id="content7">
+    <canvas id="pm25-histogram"></canvas> 
+</div>
+
+<div id="content4">
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Waktu</th>
+                <th>Kadar PM2.5 (ug/m³)</th>
+            </tr>
+        </thead>
+        <tbody id="pm25-table">
+            <!-- Isi tabel akan ditambahkan di sini -->
+        </tbody>
+    </table>
+</div>
+
+<div id="content">
+    <h5>OVERVIEW-KADAR PM2.5</h5>
+</div>
+
+<div id="content">
+    <h6>HISTOGRAM-KADAR PM2.5</h6>
+</div>
+
+<div id="content">
+    <h7>DATA-KADAR PM2.5</h7>
+</div>
+
+<script src="pm2.5java.js"></script> <!-- Tautan ke file JavaScript yang sesuai -->
+</body>
+</html>

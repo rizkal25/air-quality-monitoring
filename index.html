@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warna Biru</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Tautan Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="halamanutamacss.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Tautan Chart.js -->
+</head>
+<body>
+
+<div id="sidebar">
+    <h2><img src="logovoe.png" alt="Logo"> Occupant Estimator</h2>
+    <div class="vertical-line"></div>
+    <div id="content1">
+        <ul>
+            <li><a href="parameter.html"><i class="fas fa-thermometer-half"></i> Suhu</a></li>
+            <li><a href="kelembabanhtml.html"><i class="fas fa-tint"></i> Kelembaban</a></li>
+            <li><a href="tekananudarahtml.html"><i class="fas fa-wind"></i> Tekanan Udara</a></li>
+            <li><a href="karbondioksidahtml.html"><i class="fas fa-smog"></i> Karbon Dioksida</a></li>
+            <li><a href="pm2.5html.html"><i class="fas fa-smog"></i> PM2.5</a></li>
+        </ul>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="box"></div>
+        <h5>Informasi</h5>
+        <p class="subtitle">VOCATIONAL OCCUPANT ESTIMATOR</p>
+        <p class="description">Sistem ini merupakan solusi pemantauan kualitas udara dalam ruangan yang memanfaatkan teknologi machine learning untuk menganalisis data sensor secara real-time. Parameter yang diukur meliputi tingkat karbon dioksida (CO2), , suhu, dan kelembapan udara. Informasi ini digunakan untuk mengestimasi jumlah pengguna ruangan dan memberikan indikator untuk melakukan pengaturan ventilasi serta suhu ruangan secara optimal. Dengan demikian, sistem ini berkontribusi pada peningkatan kualitas udara, kenyamanan, kesehatan, dan produktivitas pengguna ruangan.</p>
+    </div>
+</div>
+
+<div id="content1">
+    <div class="container1">
+        <div class="chart-container suhu-container">
+            <canvas id="suhuChart"></canvas>
+            <div class="chart-label" id="suhu-label"></div>
+        </div>
+        <div class="chart-container kelembaban-container">
+            <canvas id="kelembabanChart"></canvas>
+            <div class="chart-label" id="kelembaban-label"></div>
+        </div>
+        <div class="chart-container tekanan-udara-container">
+            <canvas id="tekananUdaraChart"></canvas>
+            <div class="chart-label" id="tekananUdara-label"></div>
+        </div>
+        <div class="chart-container karbon-dioksida-container">
+            <canvas id="karbonDioksidaChart"></canvas>
+            <div class="chart-label" id="karbonDioksida-label"></div>
+        </div>
+        <div class="chart-container pm25-container">
+            <canvas id="pm25Chart"></canvas>
+            <div class="chart-label" id="pm25-label"></div>
+        </div>
+    </div>
+</div>
+
+<div id="icon-groups">
+    <div class="group low">
+      
+        <svg class="icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <svg class="icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <svg class="icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <span class="group-name">Kelas Low</span>
+    </div>
+    <div class="group medium">
+        
+        <svg class="icon-yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <svg class="icon-yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <svg class="icon-yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <span class="group-name"> Kelas Medium</span>
+    </div>
+    <div class="group high">
+       
+        <svg class="icon-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <svg class="icon-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <svg class="icon-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 22s-4-3-4-7V9h8v6c0 4-4 7-4 7z"/>
+        </svg>
+        <span class="group-name"> Kelas High</span>
+    
+    </div>
+</div>
+<div id="image-container">
+    <img src="VOE.png" alt="Deskripsi Gambar">
+</div>
+
+<div id="content3">
+    <h5>Klasifikasi</h5>
+</div>
+</body>
+
+<script src="halamanutamajava.js"></script>
+</html>
